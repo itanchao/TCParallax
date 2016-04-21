@@ -73,7 +73,7 @@ class ParallaxScrollView: UIView {
         let images =  UIScrollView(frame: bounds)
         imageScrollView = images
         subView = subV
-        subView?.contentMode = .ScaleAspectFit
+        subView?.contentMode = .ScaleAspectFill
         subV.autoresizingMask = [.FlexibleLeftMargin,.FlexibleRightMargin,.FlexibleTopMargin,.FlexibleBottomMargin,.FlexibleHeight,.FlexibleWidth]
         imageScrollView?.addSubview(subV)
         bluredImageView = UIImageView(frame: subV.frame)
@@ -88,7 +88,7 @@ class ParallaxScrollView: UIView {
         imageScrollView = imageS
         let imageV = UIImageView(frame: imageS.bounds)
         imageView = imageV
-        imageView?.contentMode = .ScaleAspectFit
+        imageView?.contentMode = .ScaleAspectFill
         imageView?.image = headerImage
         imageView?.autoresizingMask = [.FlexibleLeftMargin,.FlexibleRightMargin,.FlexibleTopMargin,.FlexibleBottomMargin,.FlexibleHeight,.FlexibleWidth]
         imageScrollView!.addSubview(imageView!)
