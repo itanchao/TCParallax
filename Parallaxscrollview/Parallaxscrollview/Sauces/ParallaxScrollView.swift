@@ -26,7 +26,7 @@ class ParallaxScrollView: UIView {
     ///  - parameter subView:   view
     ///  - parameter referView: 依赖view(headerView会依赖于这个view形变)
     static func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableView) -> ParallaxScrollView {
-       let paraScrollView = ParallaxScrollView(frame: CGRect(origin: CGPointZero, size: subView.bounds.size))
+        let paraScrollView = ParallaxScrollView(frame: CGRect(origin: CGPointZero, size: subView.bounds.size))
         paraScrollView.dependTableView = referView
         paraScrollView.initialSetupForCustomSubView(subView)
         return paraScrollView
@@ -68,15 +68,19 @@ class ParallaxScrollView: UIView {
             headerTitleLabel?.alpha = 1 - (delta) * 1 / kMaxTitleAlphaOffset
         }
     }
-   private func initialSetupForCustomSubView(subV:UIView) {
-        imageScrollView = UIScrollView(frame: bounds)
+    
+    private func initialSetupForCustomSubView(subV:UIView) {
+        let images =  UIScrollView(frame: bounds)
+        imageScrollView = images
         subView = subV
+        subView?.contentMode = .ScaleAspectFit
         subV.autoresizingMask = [.FlexibleLeftMargin,.FlexibleRightMargin,.FlexibleTopMargin,.FlexibleBottomMargin,.FlexibleHeight,.FlexibleWidth]
         imageScrollView?.addSubview(subV)
         bluredImageView = UIImageView(frame: subV.frame)
         bluredImageView?.autoresizingMask = subV.autoresizingMask
         bluredImageView?.alpha = 0
         imageScrollView?.addSubview(bluredImageView!)
+        addSubview(imageScrollView!)
         refreshBlurViewForNewImage()
     }
     private func initialSetupForDefaultHeader() {
@@ -84,6 +88,7 @@ class ParallaxScrollView: UIView {
         imageScrollView = imageS
         let imageV = UIImageView(frame: imageS.bounds)
         imageView = imageV
+        imageView?.contentMode = .ScaleAspectFit
         imageView?.image = headerImage
         imageView?.autoresizingMask = [.FlexibleLeftMargin,.FlexibleRightMargin,.FlexibleTopMargin,.FlexibleBottomMargin,.FlexibleHeight,.FlexibleWidth]
         imageScrollView!.addSubview(imageView!)
