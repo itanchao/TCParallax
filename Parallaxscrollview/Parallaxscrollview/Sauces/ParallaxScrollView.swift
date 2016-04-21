@@ -31,6 +31,12 @@ class ParallaxScrollView: UIView {
         paraScrollView.initialSetupForCustomSubView(subView)
         return paraScrollView
     }
+    ///  刷新
+    func refreshBlurViewForNewImage() {
+        var screenShot = screenShotOfView(self)
+        screenShot = screenShot.applyBlurWithblurRadius(5, tintColor: UIColor(white: 0.6, alpha: 0.2), saturationDeltaFactor: 1.0, maskImage: nil)!
+        bluredImageView?.image = screenShot
+    }
     internal override func awakeFromNib() {
         if (subView != nil) {
             initialSetupForCustomSubView(subView!)
@@ -41,9 +47,9 @@ class ParallaxScrollView: UIView {
         refreshBlurViewForNewImage()
     }
     // MARK:- 私有函数
+    ///  滑动时添加效果
     private func layoutHeaderViewForScrollViewOffset(offset:CGPoint) {
         var frametemp = imageScrollView!.frame
-        print(offset.y)
         if offset.y > 0 {
             frametemp.origin.y = max(offset.y * kParallaxDeltaFactor, 0)
             imageScrollView?.frame = frametemp
@@ -61,11 +67,6 @@ class ParallaxScrollView: UIView {
             clipsToBounds = false
             headerTitleLabel?.alpha = 1 - (delta) * 1 / kMaxTitleAlphaOffset
         }
-    }
-    func refreshBlurViewForNewImage() {
-        var screenShot = screenShotOfView(self)
-        screenShot = screenShot.applyBlurWithblurRadius(5, tintColor: UIColor(white: 0.6, alpha: 0.2), saturationDeltaFactor: 1.0, maskImage: nil)!
-        bluredImageView?.image = screenShot
     }
    private func initialSetupForCustomSubView(subV:UIView) {
         imageScrollView = UIScrollView(frame: bounds)
@@ -114,7 +115,8 @@ class ParallaxScrollView: UIView {
         UIGraphicsEndImageContext()
         return icon
     }
-    func watchDependViewScrolled() {
+    ///  监听依赖View的滚动
+    private func watchDependViewScrolled() {
         dependTableView!.addObserver(self, forKeyPath: "contentOffset", options: [.New,.Old], context: UnsafeMutablePointer<Void>.alloc(0))
     }
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
