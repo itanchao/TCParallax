@@ -1,10 +1,12 @@
 # TCParallax
 **写在前面:**
+
+
 &emsp;&emsp;TCParallax 是在[ParallaxTableViewHeader](https://github.com/Vinodh-G/ParallaxTableViewHeader.git)的基础上封装的Swift版本，可以说是***<font face="微软雅黑" size = 72 color = "#DC143C">抄的</font>***
 
 
 Parallax scrolling effect on UITableView header view when a tableView is scrolled
-![](https://github.com/itanchao/TCParallax/blob/master/Parallaxscrollview/Parallaxscrollview/演示.gif?raw=true)
+
 
 
 #API
@@ -51,4 +53,6 @@ static func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableV
     return _headerView;
 }
 ```
+
+![](https://github.com/itanchao/TCParallax/blob/master/Parallaxscrollview/Parallaxscrollview/演示.gif?raw=true)
 
