@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		213252971CC8A1A0007EF3EC /* imageDemo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 213252961CC8A1A0007EF3EC /* imageDemo.jpg */; };
+		2136E8BB1D61A3C500D09DDA /* 演示.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2136E8BA1D61A3C500D09DDA /* 演示.gif */; };
 		21C26AC81CC77E49005675C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C26AC71CC77E49005675C0 /* AppDelegate.swift */; };
 		21C26ACA1CC77E49005675C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C26AC91CC77E49005675C0 /* ViewController.swift */; };
 		21C26ACD1CC77E49005675C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C26ACB1CC77E49005675C0 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		213252961CC8A1A0007EF3EC /* imageDemo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imageDemo.jpg; sourceTree = "<group>"; };
+		2136E8BA1D61A3C500D09DDA /* 演示.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "演示.gif"; sourceTree = "<group>"; };
 		21C26AC41CC77E49005675C0 /* Parallaxscrollview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parallaxscrollview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C26AC71CC77E49005675C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21C26AC91CC77E49005675C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		21C26AC61CC77E49005675C0 /* Parallaxscrollview */ = {
 			isa = PBXGroup;
 			children = (
+				2136E8BA1D61A3C500D09DDA /* 演示.gif */,
 				213252961CC8A1A0007EF3EC /* imageDemo.jpg */,
 				21C26AD91CC77E68005675C0 /* Sauces */,
 				21C26AC71CC77E49005675C0 /* AppDelegate.swift */,
@@ -139,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2136E8BB1D61A3C500D09DDA /* 演示.gif in Resources */,
 				21C26AD21CC77E49005675C0 /* LaunchScreen.storyboard in Resources */,
 				21C26ACF1CC77E49005675C0 /* Assets.xcassets in Resources */,
 				213252971CC8A1A0007EF3EC /* imageDemo.jpg in Resources */,
