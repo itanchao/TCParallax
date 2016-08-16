@@ -10,6 +10,7 @@ Parallax scrolling effect on UITableView header view when a tableView is scrolle
 
 
 #API
+======
 ```swift
  ///  创建一个只有一张图片的headerView
  ///
@@ -25,6 +26,7 @@ static func creatParallaxScrollViewWithImage(image:UIImage,forSize:CGSize,referV
 static func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableView) -> ParallaxScrollView 
 ```
 #使用
+======
 ##swift
 ```swift
  let headerView = ParallaxScrollView.creatParallaxScrollViewWithImage(UIImage(named: "imageDemo.jpg")!, forSize: CGSize(width: tableView.bounds.width, height: 300),referView: tableView)
@@ -54,5 +56,5 @@ static func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableV
 }
 ```
 
-![](https://github.com/itanchao/TCParallax/blob/master/Parallaxscrollview/Parallaxscrollview/演示.gif?raw=true)
+![solarized vim](https://github.com/itanchao/TCParallax/blob/master/Parallaxscrollview/Parallaxscrollview/演示.gif?raw=true)
 
