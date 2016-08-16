@@ -10,7 +10,7 @@ Parallax scrolling effect on UITableView header view when a tableView is scrolle
 
 
 #API
-```
+```swift
  ///  创建一个只有一张图片的headerView
  ///
  ///  - parameter image:     要展示的图片
@@ -31,7 +31,7 @@ static func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableV
         tableView.tableHeaderView = headerView
 ```
 ## Object-C
-```object-c
+```Objective-C
 - (UITableView *)tableView{
     if (!_tableView) {
         _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
