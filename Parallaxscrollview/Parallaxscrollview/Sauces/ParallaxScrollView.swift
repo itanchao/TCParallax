@@ -15,7 +15,7 @@ class ParallaxScrollView: UIView {
     ///  - parameter forSize:   view大xiao
     ///  - parameter referView: 依赖view(headerView会依赖于这个view形变)
     static func creatParallaxScrollViewWithImage(image:UIImage,forSize:CGSize,referView:UITableView?) -> ParallaxScrollView {
-        let paraScrollView = ParallaxScrollView(frame: CGRect(origin: CGPointZero, size: forSize))
+        let paraScrollView = ParallaxScrollView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: forSize))
         paraScrollView.dependTableView = referView
         paraScrollView.headerImage = image
         paraScrollView.initialSetupForDefaultHeader()
@@ -26,20 +26,20 @@ class ParallaxScrollView: UIView {
     ///  - parameter subView:   view
     ///  - parameter referView: 依赖view(headerView会依赖于这个view形变)
     static func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableView) -> ParallaxScrollView {
-        let paraScrollView = ParallaxScrollView(frame: CGRect(origin: CGPointZero, size: subView.bounds.size))
+        let paraScrollView = ParallaxScrollView(frame: CGRect(origin:  CGPoint(x: 0, y: 0), size: subView.bounds.size))
         paraScrollView.dependTableView = referView
-        paraScrollView.initialSetupForCustomSubView(subView)
+        paraScrollView.initialSetupForCustomSubView(subV: subView)
         return paraScrollView
     }
     ///  刷新
     func refreshBlurViewForNewImage() {
-        var screenShot = screenShotOfView(self)
-        screenShot = screenShot.applyBlurWithblurRadius(5, tintColor: UIColor(white: 0.6, alpha: 0.2), saturationDeltaFactor: 1.0, maskImage: nil)!
+        var screenShot = screenShotOfView(view: self)
+        screenShot = screenShot.applyBlurWithblurRadius(blurRadius: 5, tintColor: UIColor(white: 0.6, alpha: 0.2), saturationDeltaFactor: 1.0, maskImage: nil)!
         bluredImageView?.image = screenShot
     }
     internal override func awakeFromNib() {
         if (subView != nil) {
-            initialSetupForCustomSubView(subView!)
+            initialSetupForCustomSubView(subV: subView!)
         }
         else{
             initialSetupForDefaultHeader()
@@ -59,7 +59,7 @@ class ParallaxScrollView: UIView {
         else{
             bluredImageView?.alpha = 0
             var delta : CGFloat = 0.0
-            var rect = CGRect(origin: CGPointZero, size: bounds.size)
+            var rect = CGRect(origin:  CGPoint(x: 0, y: 0), size: bounds.size)
             delta = fabs(min(0.0, offset.y))
             rect.origin.y -= delta
             rect.size.height += delta
@@ -73,8 +73,8 @@ class ParallaxScrollView: UIView {
         let images =  UIScrollView(frame: bounds)
         imageScrollView = images
         subView = subV
-        subView?.contentMode = .ScaleAspectFill
-        subV.autoresizingMask = [.FlexibleLeftMargin,.FlexibleRightMargin,.FlexibleTopMargin,.FlexibleBottomMargin,.FlexibleHeight,.FlexibleWidth]
+        subView?.contentMode = .scaleAspectFill
+        subV.autoresizingMask = [.flexibleLeftMargin,.flexibleRightMargin,.flexibleTopMargin,.flexibleBottomMargin,.flexibleHeight,.flexibleWidth]
         imageScrollView?.addSubview(subV)
         bluredImageView = UIImageView(frame: subV.frame)
         bluredImageView?.autoresizingMask = subV.autoresizingMask
@@ -88,9 +88,9 @@ class ParallaxScrollView: UIView {
         imageScrollView = imageS
         let imageV = UIImageView(frame: imageS.bounds)
         imageView = imageV
-        imageView?.contentMode = .ScaleAspectFill
+        imageView?.contentMode = .scaleAspectFill
         imageView?.image = headerImage
-        imageView?.autoresizingMask = [.FlexibleLeftMargin,.FlexibleRightMargin,.FlexibleTopMargin,.FlexibleBottomMargin,.FlexibleHeight,.FlexibleWidth]
+        imageView?.autoresizingMask = [.flexibleLeftMargin,.flexibleRightMargin,.flexibleTopMargin,.flexibleBottomMargin,.flexibleHeight,.flexibleWidth]
         imageScrollView!.addSubview(imageView!)
         var labelRect = imageScrollView!.bounds
         labelRect.origin.x = kLabelPaddingDist
@@ -99,12 +99,12 @@ class ParallaxScrollView: UIView {
         labelRect.size.height = labelRect.size.height - 2 * kLabelPaddingDist
         let headerl = UILabel(frame: labelRect)
         headerTitleLabel = headerl
-        headerTitleLabel!.textColor = UIColor.whiteColor()
+        headerTitleLabel!.textColor = UIColor.white
         headerTitleLabel!.font = UIFont(name: "AvenirNextCondensed-Regular", size: 23)
-        headerTitleLabel!.autoresizingMask = [.FlexibleLeftMargin,.FlexibleRightMargin,.FlexibleTopMargin,.FlexibleBottomMargin,.FlexibleHeight,.FlexibleWidth]
-        headerTitleLabel!.textAlignment = .Center
+        headerTitleLabel!.autoresizingMask = [.flexibleLeftMargin,.flexibleRightMargin,.flexibleTopMargin,.flexibleBottomMargin,.flexibleHeight,.flexibleWidth]
+        headerTitleLabel!.textAlignment = .center
         headerTitleLabel!.numberOfLines = 0
-        headerTitleLabel!.lineBreakMode = .ByWordWrapping
+        headerTitleLabel!.lineBreakMode = .byWordWrapping
         imageScrollView!.addSubview(headerTitleLabel!)
         let bluredImageV = UIImageView(frame: imageView!.frame)
         bluredImageView = bluredImageV
@@ -115,18 +115,18 @@ class ParallaxScrollView: UIView {
     }
     private func screenShotOfView(view:UIView) ->UIImage{
         UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0)
-        drawViewHierarchyInRect(bounds, afterScreenUpdates: false)
+        drawHierarchy(in: bounds, afterScreenUpdates: false)
         let icon = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return icon
+        return icon!
     }
     ///  监听依赖View的滚动
-    private func watchDependViewScrolled() {
-        dependTableView!.addObserver(self, forKeyPath: "contentOffset", options: [.New,.Old], context: UnsafeMutablePointer<Void>.alloc(0))
+     func watchDependViewScrolled() {
+        dependTableView!.addObserver(self, forKeyPath: "contentOffset", options: [.new,.old], context: UnsafeMutableRawPointer.allocate(bytes: 0, alignedTo: 0))
     }
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutableRawPointer) {
         if keyPath == "contentOffset" {
-            layoutHeaderViewForScrollViewOffset(dependTableView!.contentOffset)
+            layoutHeaderViewForScrollViewOffset(offset: dependTableView!.contentOffset)
         }
     }
     private var dependTableView : UITableView?{
