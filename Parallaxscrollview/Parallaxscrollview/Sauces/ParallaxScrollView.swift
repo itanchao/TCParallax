@@ -14,7 +14,7 @@ class ParallaxScrollView: UIView {
     ///  - parameter image:     要展示的图片
     ///  - parameter forSize:   view大xiao
     ///  - parameter referView: 依赖view(headerView会依赖于这个view形变)
-    static func creatParallaxScrollViewWithImage(image:UIImage,forSize:CGSize,referView:UITableView?) -> ParallaxScrollView {
+    class func creatParallaxScrollViewWithImage(image:UIImage,forSize:CGSize,referView:UITableView?) -> ParallaxScrollView {
         let paraScrollView = ParallaxScrollView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: forSize))
         paraScrollView.dependTableView = referView
         paraScrollView.headerImage = image
@@ -25,7 +25,7 @@ class ParallaxScrollView: UIView {
     ///
     ///  - parameter subView:   view
     ///  - parameter referView: 依赖view(headerView会依赖于这个view形变)
-    static func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableView) -> ParallaxScrollView {
+    class func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableView) -> ParallaxScrollView {
         let paraScrollView = ParallaxScrollView(frame: CGRect(origin:  CGPoint(x: 0, y: 0), size: subView.bounds.size))
         paraScrollView.dependTableView = referView
         paraScrollView.initialSetupForCustomSubView(subV: subView)
@@ -48,7 +48,7 @@ class ParallaxScrollView: UIView {
     }
     // MARK:- 私有函数
     ///  滑动时添加效果
-    private func layoutHeaderViewForScrollViewOffset(offset:CGPoint) {
+    fileprivate func layoutHeaderViewForScrollViewOffset(offset:CGPoint) {
         var frametemp = imageScrollView!.frame
         if offset.y > 0 {
             frametemp.origin.y = max(offset.y * kParallaxDeltaFactor, 0)
@@ -69,7 +69,7 @@ class ParallaxScrollView: UIView {
         }
     }
     
-    private func initialSetupForCustomSubView(subV:UIView) {
+    fileprivate func initialSetupForCustomSubView(subV:UIView) {
         let images =  UIScrollView(frame: bounds)
         imageScrollView = images
         subView = subV
@@ -121,10 +121,11 @@ class ParallaxScrollView: UIView {
         return icon!
     }
     ///  监听依赖View的滚动
-     func watchDependViewScrolled() {
-        dependTableView!.addObserver(self, forKeyPath: "contentOffset", options: [.new,.old], context: UnsafeMutableRawPointer.allocate(bytes: 0, alignedTo: 0))
+     fileprivate func watchDependViewScrolled() {
+        var myContext = 0
+        dependTableView?.addObserver(self, forKeyPath: "contentOffset", options: [.new,.old], context: &myContext);
     }
-    func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutableRawPointer) {
+    internal override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "contentOffset" {
             layoutHeaderViewForScrollViewOffset(offset: dependTableView!.contentOffset)
         }
