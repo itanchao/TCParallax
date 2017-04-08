@@ -3,15 +3,12 @@
 
 
 
-
-
 Parallax scrolling effect on UITableView header view when a tableView is scrolled
 
 
 
 #API
-======
-```swift
+```
  ///  创建一个只有一张图片的headerView
  ///
  ///  - parameter image:     要展示的图片
@@ -25,12 +22,14 @@ static func creatParallaxScrollViewWithImage(image:UIImage,forSize:CGSize,referV
  ///  - parameter referView: 依赖view(headerView会依赖于这个view形变)
 static func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableView) -> ParallaxScrollView 
 ```
+
+
+
 #使用
-======
 ## swift
 ```swift
- let headerView = ParallaxScrollView.creatParallaxScrollViewWithImage(UIImage(named: "imageDemo.jpg")!, forSize: CGSize(width: tableView.bounds.width, height: 300),referView: tableView)
-        tableView.tableHeaderView = headerView
+let headerView = ParallaxScrollView.creatParallaxScrollViewWithImage(UIImage(named: "imageDemo.jpg")!, forSize: CGSize(width: tableView.bounds.width, height: 300),referView: tableView) 
+tableView.tableHeaderView = headerView
 ```
 ## Object-C
 ```Objective-C
