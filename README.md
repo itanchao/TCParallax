@@ -27,7 +27,7 @@ static func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableV
 ```
 #使用
 ======
-##swift
+## swift
 ```swift
  let headerView = ParallaxScrollView.creatParallaxScrollViewWithImage(UIImage(named: "imageDemo.jpg")!, forSize: CGSize(width: tableView.bounds.width, height: 300),referView: tableView)
         tableView.tableHeaderView = headerView
