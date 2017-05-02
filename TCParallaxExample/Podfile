@@ -1,4 +1,5 @@
 platform :ios, ‘8.0’ 
-target "TCParallax" do
+use_frameworks!
+target "TCParallaxExample" do
 	pod 'TCParallax'
 end
