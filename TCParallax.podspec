@@ -5,7 +5,7 @@ s.summary      = "Parallax scrolling effect on UITableView header view when a ta
 s.homepage     = "https://github.com/itanchao/TCParallax"
 #s.screenshots  = "./演示.gif"
 s.license      = "MIT"
-s.author       = { "谈超" => "itanchao@google.com" }
+s.author       = { "谈超" => "itanchao@gmail.com" }
 s.platform     = :ios, "8.0"
 s.source       = { :git => "https://github.com/itanchao/TCParallax.git", :tag => s.version }
 s.source_files  = "Sauces", "Sauces/*.{swift}"
