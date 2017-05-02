@@ -6,7 +6,6 @@
 //  Copyright © 2016年 谈超. All rights reserved.
 //
 import UIKit
-
 class ParallaxScrollView: UIView {
     var headerImage:UIImage = UIImage()
     @IBOutlet weak var headerTitleLabel: UILabel?

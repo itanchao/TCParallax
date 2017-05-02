@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		1CB581E1795CD76D7C541E0900E17530 /* Pods-TCParallaxExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E86E0603385425559CC06E4DE50EFD /* Pods-TCParallaxExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F82311E5C2860E7D52A61AA5916445A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		66EC4346FC4966C1A73D49BC12A345A0 /* UIImage+ImageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690AEB76714FCF6930B2A0A2076E9688 /* UIImage+ImageEffects.swift */; };
+		5AF855A22A02D641227D85909E7DB428 /* TCParallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C97D575F5A27452C5916AC26D7EBCE /* TCParallax.swift */; };
 		7A5426A76263A742B8E5D23350BAA811 /* Pods-TCParallaxExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DACA5110390F484E6B1D4A756DF191D /* Pods-TCParallaxExample-dummy.m */; };
-		96C1670AF93D96FDE464CFA202FE1E88 /* TCParallax-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C353462E74DFAF370ABF4636E8011D73 /* TCParallax-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96C1670AF93D96FDE464CFA202FE1E88 /* TCParallax-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68AF1304E29530431CB33B4E4874A665 /* TCParallax-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9A137E4133484AE1A8547895A67053E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		F410AF9E974A7B195BB94AAD796D4839 /* ParallaxScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3486DCF525E87DEC56CEF8E51F21D3 /* ParallaxScrollView.swift */; };
-		FEAA29B20966B490342EA2277640B841 /* TCParallax-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F06300EE709B4A8B9C996971CD4EC7 /* TCParallax-dummy.m */; };
+		E0D25E3C6546F08EA9B28223B384014E /* UIImage+ImageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9360B98148EBCF38E0B02F005A14C7 /* UIImage+ImageEffects.swift */; };
+		FF80BECDFFCC139A2E49FEC950A94F32 /* TCParallax-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD1C318B753237BCF9B01A69A9C57E /* TCParallax-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,27 +28,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DDAB0FE70099B0797BAC1AC60A4F444 /* TCParallax.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TCParallax.xcconfig; sourceTree = "<group>"; };
+		11C97D575F5A27452C5916AC26D7EBCE /* TCParallax.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TCParallax.swift; path = Sauces/TCParallax.swift; sourceTree = "<group>"; };
 		1D2E596EB266AF001E6B2AC1D074ADF6 /* Pods_TCParallaxExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TCParallaxExample.framework; path = "Pods-TCParallaxExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6D945CCBF850F97227D86032BF3909 /* Pods-TCParallaxExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCParallaxExample.release.xcconfig"; sourceTree = "<group>"; };
 		20939E87057ED9F6F8B084AC8D3EE70B /* TCParallax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TCParallax.framework; path = TCParallax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C99C96EA50D53B904E674EEF053F516 /* TCParallax-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TCParallax-prefix.pch"; sourceTree = "<group>"; };
+		2D9360B98148EBCF38E0B02F005A14C7 /* UIImage+ImageEffects.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ImageEffects.swift"; path = "Sauces/UIImage+ImageEffects.swift"; sourceTree = "<group>"; };
 		3D5BC81CF8B4564BC75C05A90F139F88 /* Pods-TCParallaxExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TCParallaxExample.modulemap"; sourceTree = "<group>"; };
-		412BBD02B27EA7715B579B3FC3BAA064 /* TCParallax.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TCParallax.xcconfig; sourceTree = "<group>"; };
 		4DACA5110390F484E6B1D4A756DF191D /* Pods-TCParallaxExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TCParallaxExample-dummy.m"; sourceTree = "<group>"; };
 		56DF1FEB029BB2B2721049C93351A1F4 /* Pods-TCParallaxExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCParallaxExample.debug.xcconfig"; sourceTree = "<group>"; };
-		59F06300EE709B4A8B9C996971CD4EC7 /* TCParallax-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TCParallax-dummy.m"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		690AEB76714FCF6930B2A0A2076E9688 /* UIImage+ImageEffects.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ImageEffects.swift"; path = "Sauces/UIImage+ImageEffects.swift"; sourceTree = "<group>"; };
+		68AF1304E29530431CB33B4E4874A665 /* TCParallax-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TCParallax-umbrella.h"; sourceTree = "<group>"; };
 		6C8DDCAD32E76A4997536A87E9A8DA05 /* Pods-TCParallaxExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TCParallaxExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		85E86E0603385425559CC06E4DE50EFD /* Pods-TCParallaxExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TCParallaxExample-umbrella.h"; sourceTree = "<group>"; };
+		8697498ECBBD24C521D4818424BBF2A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EAD1C318B753237BCF9B01A69A9C57E /* TCParallax-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TCParallax-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BB3486DCF525E87DEC56CEF8E51F21D3 /* ParallaxScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParallaxScrollView.swift; path = Sauces/ParallaxScrollView.swift; sourceTree = "<group>"; };
+		B3340AA9350254CF88DFF583A8B31E9E /* TCParallax.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TCParallax.modulemap; sourceTree = "<group>"; };
 		BC989E516A8BEDEE48F6FF5BF9938D05 /* Pods-TCParallaxExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCParallaxExample-frameworks.sh"; sourceTree = "<group>"; };
 		BD28D49A4EFA5E4FF0C3413DC6C12B14 /* Pods-TCParallaxExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TCParallaxExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		C353462E74DFAF370ABF4636E8011D73 /* TCParallax-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TCParallax-umbrella.h"; sourceTree = "<group>"; };
-		C3C6735D23BA98DC69BCF7E49B04A885 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFC733B5318E4E3DE2E292B408F36142 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7E8DB4514F75689ACF12DECAB24F43E /* TCParallax.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TCParallax.modulemap; sourceTree = "<group>"; };
-		E35831E0CC4D77C2DDFCFAFFB2AB2869 /* TCParallax-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TCParallax-prefix.pch"; sourceTree = "<group>"; };
 		E3628CE884F8CF766AC7656355276AA0 /* Pods-TCParallaxExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCParallaxExample-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,18 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		32EA5EE3606B9D0A204FE1C68694BECA /* Support Files */ = {
+		42EA0CD63670C6533C72FF7E59395A72 /* TCParallax */ = {
 			isa = PBXGroup;
 			children = (
-				C3C6735D23BA98DC69BCF7E49B04A885 /* Info.plist */,
-				D7E8DB4514F75689ACF12DECAB24F43E /* TCParallax.modulemap */,
-				412BBD02B27EA7715B579B3FC3BAA064 /* TCParallax.xcconfig */,
-				59F06300EE709B4A8B9C996971CD4EC7 /* TCParallax-dummy.m */,
-				E35831E0CC4D77C2DDFCFAFFB2AB2869 /* TCParallax-prefix.pch */,
-				C353462E74DFAF370ABF4636E8011D73 /* TCParallax-umbrella.h */,
+				11C97D575F5A27452C5916AC26D7EBCE /* TCParallax.swift */,
+				2D9360B98148EBCF38E0B02F005A14C7 /* UIImage+ImageEffects.swift */,
+				B6A8D09C7EF39F80CB58D4AC62C0434F /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/TCParallax";
+			name = TCParallax;
+			path = TCParallax;
 			sourceTree = "<group>";
 		};
 		5795B88B6D8D41C2F80BF51B97F11EB7 /* Targets Support Files */ = {
@@ -106,7 +103,7 @@
 		641667B178D5753DCB34C5A778389352 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DE15E5F2A4EBD844C401AA991C9E4410 /* TCParallax */,
+				42EA0CD63670C6533C72FF7E59395A72 /* TCParallax */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -140,6 +137,20 @@
 			path = "Target Support Files/Pods-TCParallaxExample";
 			sourceTree = "<group>";
 		};
+		B6A8D09C7EF39F80CB58D4AC62C0434F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8697498ECBBD24C521D4818424BBF2A0 /* Info.plist */,
+				B3340AA9350254CF88DFF583A8B31E9E /* TCParallax.modulemap */,
+				0DDAB0FE70099B0797BAC1AC60A4F444 /* TCParallax.xcconfig */,
+				8EAD1C318B753237BCF9B01A69A9C57E /* TCParallax-dummy.m */,
+				2C99C96EA50D53B904E674EEF053F516 /* TCParallax-prefix.pch */,
+				68AF1304E29530431CB33B4E4874A665 /* TCParallax-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TCParallax";
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,17 +165,6 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		DE15E5F2A4EBD844C401AA991C9E4410 /* TCParallax */ = {
-			isa = PBXGroup;
-			children = (
-				BB3486DCF525E87DEC56CEF8E51F21D3 /* ParallaxScrollView.swift */,
-				690AEB76714FCF6930B2A0A2076E9688 /* UIImage+ImageEffects.swift */,
-				32EA5EE3606B9D0A204FE1C68694BECA /* Support Files */,
-			);
-			name = TCParallax;
-			path = TCParallax;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61C7F2B5A123576B46E47F20919B2B02 /* Build configuration list for PBXNativeTarget "TCParallax" */;
 			buildPhases = (
-				093C416CB163F6BD6DAE626A8CE100FE /* Sources */,
+				502FAA9621E5D8FF640855DB29B9FAA8 /* Sources */,
 				01FFB6CB583F64CC73923200518DF637 /* Frameworks */,
 				5F672165F3364495A6D07241B7FC1C6F /* Headers */,
 			);
@@ -252,21 +252,21 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		093C416CB163F6BD6DAE626A8CE100FE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F410AF9E974A7B195BB94AAD796D4839 /* ParallaxScrollView.swift in Sources */,
-				FEAA29B20966B490342EA2277640B841 /* TCParallax-dummy.m in Sources */,
-				66EC4346FC4966C1A73D49BC12A345A0 /* UIImage+ImageEffects.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		258BA820953D4E3E39C7512398354AC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7A5426A76263A742B8E5D23350BAA811 /* Pods-TCParallaxExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		502FAA9621E5D8FF640855DB29B9FAA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF80BECDFFCC139A2E49FEC950A94F32 /* TCParallax-dummy.m in Sources */,
+				5AF855A22A02D641227D85909E7DB428 /* TCParallax.swift in Sources */,
+				E0D25E3C6546F08EA9B28223B384014E /* UIImage+ImageEffects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +284,7 @@
 /* Begin XCBuildConfiguration section */
 		1BC0F764F2BEFC42D0A3B1E67A1D244A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 412BBD02B27EA7715B579B3FC3BAA064 /* TCParallax.xcconfig */;
+			baseConfigurationReference = 0DDAB0FE70099B0797BAC1AC60A4F444 /* TCParallax.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -363,7 +363,7 @@
 		};
 		41A85ADEE2C9FB2B51383354801ABDA8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 412BBD02B27EA7715B579B3FC3BAA064 /* TCParallax.xcconfig */;
+			baseConfigurationReference = 0DDAB0FE70099B0797BAC1AC60A4F444 /* TCParallax.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
