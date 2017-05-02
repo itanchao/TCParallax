@@ -37,7 +37,7 @@ public class ParallaxScrollView: UIView {
         screenShot = screenShot.applyBlurWithblurRadius(blurRadius: 5, tintColor: UIColor(white: 0.6, alpha: 0.2), saturationDeltaFactor: 1.0, maskImage: nil)!
         bluredImageView?.image = screenShot
     }
-    internal override func awakeFromNib() {
+    override func awakeFromNib() {
         if (subView != nil) {
             initialSetupForCustomSubView(subV: subView!)
         }
@@ -125,7 +125,7 @@ public class ParallaxScrollView: UIView {
         var myContext = 0
         dependTableView?.addObserver(self, forKeyPath: "contentOffset", options: [.new,.old], context: &myContext);
     }
-    internal override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "contentOffset" {
             layoutHeaderViewForScrollViewOffset(offset: dependTableView!.contentOffset)
         }
