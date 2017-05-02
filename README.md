@@ -5,6 +5,18 @@
 
 Parallax scrolling effect on UITableView header view when a tableView is scrolled
 
+## 使用
+
+~~~Pod
+platform :ios, ‘8.0’ 
+use_frameworks!
+target "TCParallaxExample" do
+	pod 'TCParallax'
+end
+~~~
+
+
+
 # API
 
 ```
