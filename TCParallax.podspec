@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "TCParallax"
-s.version      = "2.0.0"
+s.version      = "2.0.1"
 s.summary      = "Parallax scrolling effect on UITableView header view when a tableView is scrolled"
 s.homepage     = "https://github.com/itanchao/TCParallax"
 #s.screenshots  = "./演示.gif"

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30078EBF4F6BD616DFF3742E /* Pods_TCParallaxExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E580B4E97E1B50231230B99 /* Pods_TCParallaxExample.framework */; };
+		D5610F9F1EB8DE81008F9146 /* imageDemo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5610F9E1EB8DE81008F9146 /* imageDemo.jpg */; };
 		D581AA831EB8A9D100707D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581AA821EB8A9D100707D81 /* AppDelegate.swift */; };
 		D581AA851EB8A9D100707D81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581AA841EB8A9D100707D81 /* ViewController.swift */; };
 		D581AA881EB8A9D100707D81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D581AA861EB8A9D100707D81 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		2268C660424B15525B5ECAF2 /* Pods-TCParallaxExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCParallaxExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCParallaxExample/Pods-TCParallaxExample.release.xcconfig"; sourceTree = "<group>"; };
 		338178446287284863A7D327 /* Pods-TCParallaxExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCParallaxExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCParallaxExample/Pods-TCParallaxExample.debug.xcconfig"; sourceTree = "<group>"; };
 		4E580B4E97E1B50231230B99 /* Pods_TCParallaxExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCParallaxExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5610F9E1EB8DE81008F9146 /* imageDemo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imageDemo.jpg; sourceTree = "<group>"; };
 		D581AA7F1EB8A9D100707D81 /* TCParallaxExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCParallaxExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D581AA821EB8A9D100707D81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D581AA841EB8A9D100707D81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		D581AA811EB8A9D100707D81 /* TCParallaxExample */ = {
 			isa = PBXGroup;
 			children = (
+				D5610F9E1EB8DE81008F9146 /* imageDemo.jpg */,
 				D581AA821EB8A9D100707D81 /* AppDelegate.swift */,
 				D581AA841EB8A9D100707D81 /* ViewController.swift */,
 				D581AA861EB8A9D100707D81 /* Main.storyboard */,
@@ -150,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5610F9F1EB8DE81008F9146 /* imageDemo.jpg in Resources */,
 				D581AA8D1EB8A9D100707D81 /* LaunchScreen.storyboard in Resources */,
 				D581AA8A1EB8A9D100707D81 /* Assets.xcassets in Resources */,
 				D581AA881EB8A9D100707D81 /* Main.storyboard in Resources */,
@@ -376,6 +380,7 @@
 				D581AA931EB8A9D100707D81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
