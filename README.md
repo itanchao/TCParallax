@@ -57,5 +57,5 @@ tableView.tableHeaderView = headerView
 }
 ```
 
-![solarized vim](https://github.com/itanchao/TCParallax/blob/master/Parallaxscrollview/Parallaxscrollview/演示.gif?raw=true)
+![solarized vim](./演示.gif)
 
