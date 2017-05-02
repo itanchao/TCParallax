@@ -78,9 +78,8 @@ extension UIImage{
             effectOutBuffer.rowBytes = effectOutContext!.bytesPerRow
             if hasBlur {
                 let inputRadius = blurRadius * UIScreen.main.scale
-//                var radius = UInt32(floor(Double(inputRadius) * 3 * sqrt(2 * M_PI)/4 +0.5))
                 var radiusd = Double(inputRadius) * 3;
-                radiusd = radiusd * 3 * sqrt(2 * M_PI) / 4
+                radiusd = radiusd * 3 * sqrt(2 * Double.pi) / 4
                 radiusd = radiusd + 0.5
                 var radius = UInt32(floor(radiusd))
                 if radius % 2 != 1 {
@@ -100,7 +99,7 @@ extension UIImage{
                     0,                    0,                    0,  1,
                 ]
                 let divisor : Int32 = 256
-                MemoryLayout.size(ofValue: floatingPointSaturationMatrix)/MemoryLayout.size(ofValue: floatingPointSaturationMatrix.first)
+//                MemoryLayout.size(ofValue: floatingPointSaturationMatrix)/MemoryLayout.size(ofValue: floatingPointSaturationMatrix.first)
                 let matrixSize = MemoryLayout.size(ofValue: floatingPointSaturationMatrix)/MemoryLayout.size(ofValue: floatingPointSaturationMatrix.first)
                 var saturationMatrix : [__int16_t] = Array(repeating: 0, count: matrixSize)
                 for i in 0 ... matrixSize {

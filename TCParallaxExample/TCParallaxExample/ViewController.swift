@@ -8,13 +8,13 @@
 
 import UIKit
 import TCParallax
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.delegate = self
+//        tableView.dataSource = self
 //        let headerView = ParallaxScrollView.creatParallaxScrollViewWithImage(image: UIImage(named: "imageDemo.jpg")!, forSize: CGSize(width: tableView.bounds.width, height: 300),referView: tableView)
 //        tableView.tableHeaderView = headerView
     }
