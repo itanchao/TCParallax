@@ -6,7 +6,7 @@
 //  Copyright © 2016年 谈超. All rights reserved.
 //
 import UIKit
-class ParallaxScrollView: UIView {
+public class ParallaxScrollView: UIView {
     var headerImage:UIImage = UIImage()
     @IBOutlet weak var headerTitleLabel: UILabel?
     ///  创建一个只有一张图片的headerView
@@ -14,7 +14,7 @@ class ParallaxScrollView: UIView {
     ///  - parameter image:     要展示的图片
     ///  - parameter forSize:   view大xiao
     ///  - parameter referView: 依赖view(headerView会依赖于这个view形变)
-    class func creatParallaxScrollViewWithImage(image:UIImage,forSize:CGSize,referView:UITableView?) -> ParallaxScrollView {
+    public func creatParallaxScrollViewWithImage(image:UIImage,forSize:CGSize,referView:UITableView?) -> ParallaxScrollView {
         let paraScrollView = ParallaxScrollView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: forSize))
         paraScrollView.dependTableView = referView
         paraScrollView.headerImage = image
@@ -25,7 +25,7 @@ class ParallaxScrollView: UIView {
     ///
     ///  - parameter subView:   view
     ///  - parameter referView: 依赖view(headerView会依赖于这个view形变)
-    class func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableView) -> ParallaxScrollView {
+    public func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableView) -> ParallaxScrollView {
         let paraScrollView = ParallaxScrollView(frame: CGRect(origin:  CGPoint(x: 0, y: 0), size: subView.bounds.size))
         paraScrollView.dependTableView = referView
         paraScrollView.initialSetupForCustomSubView(subV: subView)
