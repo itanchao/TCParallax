@@ -14,7 +14,7 @@ public class ParallaxScrollView: UIView {
     ///  - parameter image:     要展示的图片
     ///  - parameter forSize:   view大xiao
     ///  - parameter referView: 依赖view(headerView会依赖于这个view形变)
-    open class func creatParallaxScrollViewWithImage(image:UIImage,forSize:CGSize,referView:UITableView?) -> ParallaxScrollView {
+    open class func creatParallaxScrollViewWithImage(image:UIImage,forSize:CGSize,referView:UIScrollView?) -> ParallaxScrollView {
         let paraScrollView = ParallaxScrollView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: forSize))
         paraScrollView.dependTableView = referView
         paraScrollView.headerImage = image
@@ -25,7 +25,7 @@ public class ParallaxScrollView: UIView {
     ///
     ///  - parameter subView:   view
     ///  - parameter referView: 依赖view(headerView会依赖于这个view形变)
-    open class func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableView) -> ParallaxScrollView {
+    open class func creatParallaxScrollViewWithSubView(subView:UIView,referView:UIScrollView) -> ParallaxScrollView {
         let paraScrollView = ParallaxScrollView(frame: CGRect(origin:  CGPoint(x: 0, y: 0), size: subView.bounds.size))
         paraScrollView.dependTableView = referView
         paraScrollView.initialSetupForCustomSubView(subV: subView)
@@ -130,7 +130,7 @@ public class ParallaxScrollView: UIView {
             layoutHeaderViewForScrollViewOffset(offset: dependTableView!.contentOffset)
         }
     }
-    private var dependTableView : UITableView?{
+    private var dependTableView : UIScrollView?{
         didSet{
             watchDependViewScrolled()
         }
