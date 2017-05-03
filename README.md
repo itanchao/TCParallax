@@ -25,13 +25,13 @@ end
  ///  - parameter image:     要展示的图片
  ///  - parameter forSize:   view大xiao
  ///  - parameter referView: 依赖view(headerView会依赖于这个view形变)
-static func creatParallaxScrollViewWithImage(image:UIImage,forSize:CGSize,referView:UITableView?) -> ParallaxScrollView 
+static func creatParallaxScrollViewWithImage(image:UIImage,forSize:CGSize,referView:UIScrollView?) -> ParallaxScrollView 
 
  ///  将一个view改造成ParallaxView
  ///
  ///  - parameter subView:   view
  ///  - parameter referView: 依赖view(headerView会依赖于这个view形变)
-static func creatParallaxScrollViewWithSubView(subView:UIView,referView:UITableView) -> ParallaxScrollView 
+static func creatParallaxScrollViewWithSubView(subView:UIView,referView:UIScrollView) -> ParallaxScrollView 
 ```
 
 

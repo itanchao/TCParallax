@@ -1,11 +1,11 @@
 PODS:
-  - TCParallax (2.0.1)
+  - TCParallax (2.0.3)
 
 DEPENDENCIES:
   - TCParallax
 
 SPEC CHECKSUMS:
-  TCParallax: 5bd5375ac56d03c86f1bf4eb29c4f5ebd937f74c
+  TCParallax: b729e5c1565c09ee596d80f1dbb438cb40a8e407
 
 PODFILE CHECKSUM: 2ed3497431b7d119e3c995a216c0381086592f4f
 
